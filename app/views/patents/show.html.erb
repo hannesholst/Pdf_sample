@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @patent.title %>
+</p>
+
+<p>
+  <b>Priorityyear:</b>
+  <%= @patent.priorityYear %>
+</p>
+
+<p>
+  <b>Applicant:</b>
+  <%= @patent.applicant %>
+</p>
+
+<p>
+  <b>Figure:</b>
+  <%= @patent.figure %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @patent.link %>
+</p>
+
+
+<%= link_to 'Edit', edit_patent_path(@patent) %> |
+<%= link_to 'Back', patents_path %>
+<%= link_to "PDF Patent", patent_path(@patent, :format => 'pdf')%>

@@ -1,0 +1,37 @@
+<%= form_for(@patent) do |f| %>
+  <% if @patent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@patent.errors.count, "error") %> prohibited this patent from being saved:</h2>
+
+      <ul>
+      <% @patent.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :priorityYear %><br />
+    <%= f.text_field :priorityYear %>
+  </div>
+  <div class="field">
+    <%= f.label :applicant %><br />
+    <%= f.text_field :applicant %>
+  </div>
+  <div class="field">
+    <%= f.label :figure %><br />
+    <%= f.text_field :figure %>
+  </div>
+  <div class="field">
+    <%= f.label :link %><br />
+    <%= f.text_field :link %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
